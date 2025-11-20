@@ -30,6 +30,6 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Order> listAll() {
-        return List.of(); 
+        return dao.getAll();
     }
 }

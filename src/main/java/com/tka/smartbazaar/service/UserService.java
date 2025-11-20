@@ -8,4 +8,7 @@ public interface UserService {
     User create(User u);
     User getById(Long id);
     List<User> listAll();
+    User findByEmail(String email);
+
+
 }

@@ -33,4 +33,10 @@ public class UserServiceImpl implements UserService {
     public List<User> listAll() {
         return dao.getAll();
     }
+    
+    @Override
+    public User findByEmail(String email) {
+        return dao.findByEmail(email);
+    }
+
 }

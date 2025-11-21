@@ -16,6 +16,10 @@ public class Product {
     private String category;
 
     private Double price;
+    
+    private String description;
+    
+    private String imageUrl;
 
     public Product() {}
 
@@ -32,4 +36,20 @@ public class Product {
     public void setCategory(String category) { this.category = category; }
     public Double getPrice() { return price; }
     public void setPrice(Double price) { this.price = price; }
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 }

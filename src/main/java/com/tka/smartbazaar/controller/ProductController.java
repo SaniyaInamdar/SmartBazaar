@@ -8,19 +8,20 @@ import com.tka.smartbazaar.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
+@CrossOrigin("http://localhost:5173/")
 public class ProductController {
 
     private final ProductService service;
 
     public ProductController(ProductService service) { this.service = service; }
 
-    @GetMapping
+    @GetMapping("/products")
     public List<Product> list() { return service.listAll(); }
 
     @GetMapping("/{id}")
     public Product get(@PathVariable Long id) { return service.getById(id); }
 
-    @PostMapping
+    @PostMapping("/add-products")
     public Product create(@RequestBody Product p) { return service.create(p); }
 
     @PutMapping("/{id}")
